@@ -1,0 +1,105 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/main_nav.ejs') %>
+<style>.card {
+      position: relative;
+      width: 400px;
+      height: 300px;
+      background-color: #f2f2f2;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      perspective: 1000px;
+      box-shadow: 0 0 0 5px #ffffff80;
+      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      margin-left: 15pt;
+      margin-right: 15pt;
+    }
+    
+    .card img {
+      /* width: 150px;
+      height: 300px; */
+      object-fit: cover;
+      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    }
+    
+    .card__content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #f2f2f2;
+      transform: rotateX(-90deg);
+      transform-origin: bottom;
+      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .card:hover .card__content {
+      transform: rotateX(0deg);
+    }
+    
+    .card__title {
+      margin: 0;
+      font-size: 24px;
+      color: #333;
+      font-weight: 700;
+    }
+    
+    .card:hover img {
+      scale: 0;
+    }
+    
+    .card__description {
+      margin: 10px 0 0;
+      font-size: 14px;
+      color: #777;
+      line-height: 1.4;
+    }
+    </style>
+      <main class=”container”>
+            <h2 class="section__title">Projects</h1>
+        <div class=”jumbotron” style=" display: flex;
+        justify-content: space-between;
+        margin-bottom: var(--mb-0-5);">
+        
+        <div class="card" style="width: 200px; margin-left: 60pt;">
+            <img src="/img/flutter.png" alt="logo" style="width: 200px;
+            height: 300px;">
+            <div class="card__content">
+              <p class="card__title">Mobile App by Flutter</p>
+              <p class="card__description">An intuitive mobile application built using Flutter that provides real-time weather information for your current location.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="/img/la.jpg" alt="logo" >
+            <div class="card__content">
+              <p class="card__title">Long arithmetic (data sctuctures)</p>
+              <p class="card__description">Experience the power of advanced long arithmetic in C#! This project harnesses the capabilities of C# to perform complex mathematical operations with ease. Whether you're dealing with enormous integers, precise decimal calculations, or need to work with specialized number formats, our C# solution has got you covered.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="/img/library.png" alt="logo" style="width: 400px;
+            height: 300px;">
+            <div class="card__content">
+              <p class="card__title">Oracle APEX Library Management System</p>
+              <p class="card__description">Discover the convenience and efficiency of this Oracle APEX Library Management System. This robust and user-friendly system is designed to streamline library operations, making it easier than ever to manage your library's collection, borrowers, and more.</p>
+            </div>
+          </div>
+        </div>
+        </main>
+<!--bottom nav-->
+   
+   
+      <!--script section-->
+      <%- include ('partials/bottom_nav.ejs') %>
+      <%- include ('partials/footer.ejs') %>

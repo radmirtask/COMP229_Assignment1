@@ -1,0 +1,84 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/main_nav.ejs') %>
+<style>.button {
+  height: 50px;
+  width: 200px;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #252525;
+  overflow: hidden;
+  border-radius: 30px;
+  color: #333;
+  transition: all 0.5s ease-in-out;
+  margin-left: 15pt;
+  margin-top: 40pt;
+}
+
+.btn-txt {
+  z-index: 1;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.type1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  background-color: #333;
+  border-radius: 30px;
+  visibility: hidden;
+  height: 10px;
+  width: 10px;
+  z-index: -1;
+}
+
+.button:hover {
+  box-shadow: 1px 1px 200px #252525;
+  color: #fff;
+  border: none;
+}
+
+.type1:hover::after {
+  visibility: visible;
+  transform: scale(100) translateX(2px);
+}</style>
+      <main class=”container”>
+        <p style="margin-top: 25pt; margin-left: 15%; margin-right: 15%;">To harness the power of algorithms and data structures, driving innovation and efficiency in every facet of technology. We are committed to unlocking the full potential of computational problem-solving, advancing the frontiers of knowledge, and optimizing systems for a smarter, data-driven world.</hp>
+        <div class=”jumbotron” style=" display: flex;
+        justify-content: center;">
+      
+      <a class="nav-link" href="/about" style="text-decoration:none;">
+          <button class="button type1">
+            <span class="btn-txt">About</span>
+          </button>
+        </a>
+
+        <a class="nav-link" href="/projects" style="text-decoration:none;">
+          <button class="button type1">
+            <span class="btn-txt">Projects</span>
+          </button>
+        </a>
+
+        <a class="nav-link" href="/services" style="text-decoration:none;">
+          <button class="button type1">
+            <span class="btn-txt">Services</span>
+          </button>
+        </a>
+        <a class="nav-link" href="/contact" style="text-decoration:none;">
+          <button class="button type1">
+            <span class="btn-txt">Contact</span>
+          </button>
+        </a>
+        </div>
+        </main>
+<!--bottom nav-->
+   
+   
+      <!--script section-->
+      <%- include ('partials/bottom_nav.ejs') %>
+      <%- include ('partials/footer.ejs') %>
+   
+  
